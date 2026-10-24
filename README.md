@@ -88,9 +88,11 @@ cline mcp add terminal-tax https://mcp.terminal.tax/v1/hosted-mcp --transport st
 
 ## About this repository
 
-This repository holds only this description, the MCP Registry `server.json`, client configuration and plugin manifest files and the logo.
+This repository holds only this description, the MCP Registry `server.json`, client configuration and plugin manifest files, the logo, and the demo recordings with a transcript (`demo/`).
 It contains no code and nothing to run: the server is hosted by Terminal Tax LLC.
 
 ## Demo
 
-[demo/terminal-tax-demo.mp4](demo/terminal-tax-demo.mp4): a two-minute recording on the Terminal Tax test environment (app.terminal.tax) with a synthetic taxpayer; nothing is filed. It shows the assistant's tool calls, the accepted packet and the hosted filing page up to the card step, before signing.
+[demo/terminal-tax-demo-1.1.0.mp4](demo/terminal-tax-demo-1.1.0.mp4): a 3 min 42 s recording on the Terminal Tax test environment (app.terminal.tax) with a fictional taxpayer; nothing is filed or charged. A customer talks with their AI assistant in plain words, answers its questions and shares their W-2 and 1099-INT as files; the assistant prepares the return with Terminal Tax and hands over the filing link; the customer reviews, signs and adds a card on the filing page. Transcript: [demo/terminal-tax-demo-1.1.0.md](demo/terminal-tax-demo-1.1.0.md).
+
+The earlier recording, [demo/terminal-tax-demo.mp4](demo/terminal-tax-demo.mp4), shows the assistant's tool calls in a terminal.
