@@ -32,8 +32,8 @@ sponsored by, or endorsed by the IRS or the U.S. Treasury.
 - Endpoint (Streamable HTTP): `https://mcp.terminal.tax/v1/hosted-mcp`
 - No account, API key, OAuth or install. Any assistant that can run a shell command or make an HTTPS request
   (Claude Code, Codex, Cursor and similar) calls it directly with JSON-RPC POSTs.
-- Claude.ai and ChatGPT in a web browser add the same address as a custom connector; steps at
-  https://terminal.tax/integrations.
+- A chat that can only search or read pages cannot send these requests: the person asks an agent app that can
+  (ChatGPT in agent or Work mode, Claude Code, Codex and similar) instead.
 - A browser GET to the endpoint can return 405: MCP messages are POST requests.
 
 ## Tools
@@ -71,38 +71,13 @@ $19.99 per federal return, charged only if the IRS accepts it.
 Terminal Tax LLC, a New Jersey limited liability company. Support: support@terminal.tax. Legal and privacy:
 legal@terminal.tax. About: https://terminal.tax/about. Terms: https://terminal.tax/terms.
 
-## Client configuration
+## Optional: MCP client configuration
 
-Claude Code:
-
-```sh
-claude mcp add --transport http terminal-tax https://mcp.terminal.tax/v1/hosted-mcp
-```
-
-Codex:
-
-```sh
-codex mcp add terminal-tax --url https://mcp.terminal.tax/v1/hosted-mcp
-```
-
-Cursor, VS Code and other clients that read `.mcp.json`: see [`.mcp.json`](.mcp.json) in this repository.
-
-Gemini CLI:
-
-```sh
-gemini extensions install https://github.com/terminaltax/terminal-tax-mcp-server
-```
-
-Kiro: Powers > Add Custom Power > Import power from GitHub, with this repository's URL (it reads
-[`plugin.json`](plugin.json) and [`mcp.json`](mcp.json)).
-
-Cursor plugin: [`.cursor-plugin/plugin.json`](.cursor-plugin/plugin.json) declares the same remote server.
-
-Cline: add a remote server named `terminal-tax` with the URL above and Streamable HTTP transport, or from the Cline CLI:
-
-```sh
-cline mcp add terminal-tax https://mcp.terminal.tax/v1/hosted-mcp --transport streamableHttp --yes
-```
+Not needed to file: agents send the HTTPS requests above directly, with no install, restart or setup. Some MCP
+clients can also add the server, with the URL `https://mcp.terminal.tax/v1/hosted-mcp` and Streamable HTTP transport:
+[`.mcp.json`](.mcp.json) (Cursor, VS Code and similar), [`gemini-extension.json`](gemini-extension.json) (Gemini CLI),
+[`plugin.json`](plugin.json) and [`mcp.json`](mcp.json) (Kiro), and
+[`.cursor-plugin/plugin.json`](.cursor-plugin/plugin.json) (Cursor plugin) declare it in this repository.
 
 ## About this repository
 

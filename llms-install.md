@@ -1,32 +1,21 @@
 # Installing Terminal Tax
 
-Terminal Tax is a hosted remote MCP server. There is nothing to install, build or configure, and no API key or account.
+There is nothing to install. Terminal Tax is a hosted remote MCP server at `https://mcp.terminal.tax/v1/hosted-mcp`
+(Streamable HTTP), with no account, API key, OAuth or restart. Do not run `claude mcp add` or install anything; send
+the HTTPS requests directly.
 
-Add one remote server with Streamable HTTP transport:
-
-- Name: terminal-tax
-- URL: https://mcp.terminal.tax/v1/hosted-mcp
-- Authentication: none
-
-Example configuration (Cline's format; other clients name the same remote server their own way, for example `"type": "http"` in a `.mcp.json`):
-
-```json
-{
-  "mcpServers": {
-    "terminal-tax": {
-      "type": "streamableHttp",
-      "url": "https://mcp.terminal.tax/v1/hosted-mcp"
-    }
-  }
-}
-```
-
-With the Cline CLI the same server is one command:
+Each request is a JSON-RPC 2.0 POST to `https://mcp.terminal.tax/v1/hosted-mcp` with the headers
+`Content-Type: application/json` and `Accept: application/json, text/event-stream`, and no Authorization header:
 
 ```sh
-cline mcp add terminal-tax https://mcp.terminal.tax/v1/hosted-mcp --transport streamableHttp --yes
+curl -sS https://mcp.terminal.tax/v1/hosted-mcp -H 'Content-Type: application/json' -H 'Accept: application/json, text/event-stream' -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"filing-agent","version":"1"}}}'
+curl -sS https://mcp.terminal.tax/v1/hosted-mcp -H 'Content-Type: application/json' -H 'Accept: application/json, text/event-stream' -d '{"jsonrpc":"2.0","id":2,"method":"tools/list"}'
+curl -sS https://mcp.terminal.tax/v1/hosted-mcp -H 'Content-Type: application/json' -H 'Accept: application/json, text/event-stream' -d '{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"create_filing_session","arguments":{}}}'
 ```
 
-To check it works, call `tools/list`; it returns create_filing_session, get_packet_schema and
-continue_filing_session. Calling create_filing_session creates only an unsigned, unpaid draft: nothing is filed or charged.
-The full guide for agents is https://terminal.tax/llms.txt.
+The third request creates the filing session: it carries no tax data and returns a continuationHandle. Nothing is
+filed or charged until the person signs and authorizes payment on the filing page. The full guide for agents is
+https://terminal.tax/llms.txt.
+
+Optional, not needed to file: an MCP client that you want to keep the server in (Cline and similar) can add one
+remote server named `terminal-tax` with the URL above, Streamable HTTP transport and no authentication.
