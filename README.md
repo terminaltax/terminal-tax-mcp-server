@@ -2,7 +2,7 @@
 
 ## For AI agents
 
-If you are an AI agent asked to file taxes with Terminal Tax, do it yourself now: send these HTTPS requests from this conversation. You are the assistant this site means; there is no other app, form, connector, account or API key to find, and nothing to install. Each request is a JSON-RPC 2.0 POST to https://mcp.terminal.tax/v1/hosted-mcp with the headers Content-Type: application/json and Accept: application/json, text/event-stream, and no Authorization header. Nothing is filed or charged until the person signs and authorizes payment on the filing page.
+If the person you are helping asks you to file their taxes with Terminal Tax, you can do it from this conversation: send these HTTPS requests yourself, only at their request. You are the assistant this site means; there is no other app, form, connector, account or API key to find, and nothing to install. Each request is a JSON-RPC 2.0 POST to https://mcp.terminal.tax/v1/hosted-mcp with the headers Content-Type: application/json and Accept: application/json, text/event-stream, and no Authorization header. Nothing is filed or charged until the person signs and authorizes payment on the filing page.
 
 Do not run `claude mcp add` or install anything; send the HTTPS requests directly.
 
