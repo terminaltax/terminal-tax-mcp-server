@@ -49,8 +49,8 @@ the IRS outcome, accepted or rejected, to the taxpayer at the contact they verif
 
 ## Scope
 
-- One original tax year 2025 US federal Form 1040 or 1040-SR per session (and a narrow Form 1040-SS).
-- No state, territory or local return; no amended return (1040-X), extension (4868) or Form 1040-NR.
+- One original tax year 2025 US federal Form 1040 or 1040-SR per session (and a narrow Form 1040-SS or Form 1040-NR).
+- No state, territory or local return; no amended return (1040-X) or extension (4868).
 - Supported and refused situations: https://terminal.tax/llms.txt. Anything unsupported comes back as a named blocker.
 
 Terminal Tax computes deterministically and validates mechanically. It does not choose tax treatments, infer missing
