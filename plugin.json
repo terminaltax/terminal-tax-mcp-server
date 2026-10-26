@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "terminal-tax",
   "version": "0.240.0",
-  "description": "E-file your federal tax return from your AI assistant; you review and sign on one hosted page.",
+  "description": "E-file your tax return from your AI assistant; you review and sign on one hosted page.",
   "author": {
     "name": "Terminal Tax LLC",
     "email": "support@terminal.tax",
@@ -11,5 +11,5 @@
   "homepage": "https://terminal.tax/integrations",
   "repository": "https://github.com/terminaltax/terminal-tax-mcp-server",
   "license": "MIT",
-  "keywords": ["tax", "taxes", "e-file", "irs e-file", "form 1040", "federal tax return", "file my taxes", "finance"]
+  "keywords": ["tax", "taxes", "e-file", "irs e-file", "form 1040", "tax return", "file my taxes", "finance"]
 }

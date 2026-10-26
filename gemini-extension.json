@@ -1,7 +1,7 @@
 {
   "name": "terminal-tax",
   "version": "0.240.0",
-  "description": "E-file your federal tax return from your AI assistant; you review and sign on one hosted page.",
+  "description": "E-file your tax return from your AI assistant; you review and sign on one hosted page.",
   "mcpServers": {
     "terminal-tax": {
       "httpUrl": "https://mcp.terminal.tax/v1/hosted-mcp"
