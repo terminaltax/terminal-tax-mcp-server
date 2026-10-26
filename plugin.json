@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "terminal-tax",
   "version": "0.240.0",
-  "description": "E-file a 2025 US federal Form 1040 from your AI assistant; you review and sign on one hosted page.",
+  "description": "E-file your federal tax return from your AI assistant; you review and sign on one hosted page.",
   "author": {
     "name": "Terminal Tax LLC",
     "email": "support@terminal.tax",

@@ -1,7 +1,7 @@
 # Terminal Tax
 
-Terminal Tax is a hosted remote MCP server, operated by Terminal Tax LLC, through which a person files one original
-tax year 2025 US federal individual income tax return (Form 1040 or Form 1040-SR) from their own AI assistant: the
+Terminal Tax is a hosted remote MCP server, operated by Terminal Tax LLC, through which a person files their original
+US federal individual income tax return (Form 1040 or Form 1040-SR) from their own AI assistant: the
 assistant passes the facts from the person's forms and their choices, and Terminal Tax computes the return. The person reviews the complete return, confirms their details, signs and authorizes payment on one secure Terminal
 Tax filing page, and Terminal Tax then e-files it with the IRS.
 
@@ -9,11 +9,11 @@ Terminal Tax LLC is an Authorized IRS e-file Provider (Online Provider, Software
 
 ## Can ChatGPT or Claude file my taxes?
 
-**Can AI file my taxes?** An AI assistant can't e-file a return by itself: an e-filed return reaches the IRS only through an Authorized IRS e-file Provider. Terminal Tax is that step for a 2025 federal return when your assistant can make web requests, such as ChatGPT in Work mode, Codex, Claude Code or Cursor, with nothing to install and no connector. Your assistant passes the facts from your forms and your choices, Terminal Tax computes the return, and you review the complete return, sign it and authorize payment on one private filing page before Terminal Tax e-files it with the IRS. The price is $19.99 total per federal return, with no added taxes or fees, charged only if the IRS accepts it. A regular chat that can't make web requests can't reach it.
+**Can AI file my taxes?** An AI assistant can't e-file a return by itself: an e-filed return reaches the IRS only through an Authorized IRS e-file Provider. Terminal Tax is that step for your federal tax return when your assistant can make web requests, such as ChatGPT in Work mode, Codex, Claude Code or Cursor, with nothing to install and no connector. Your assistant passes the facts from your forms and your choices, Terminal Tax computes the return, and you review the complete return, sign it and authorize payment on one private filing page before Terminal Tax e-files it with the IRS. The price is $19.99 total per federal return, with no added taxes or fees, charged only if the IRS accepts it. A regular chat that can't make web requests can't reach it.
 
-**Can ChatGPT file my taxes?** ChatGPT does not file returns itself, but in Work mode or in Codex (also in the ChatGPT app) it can take your 2025 federal return to Terminal Tax with nothing to install and no connector: say "File my 2025 taxes with terminal.tax." ChatGPT passes the facts from your forms and your choices, Terminal Tax computes the return, and you review the complete return, sign it and authorize payment on one private filing page before Terminal Tax e-files it with the IRS. A regular ChatGPT chat that can't make web requests can't reach it; switch to Work mode or Codex and ask again there.
+**Can ChatGPT file my taxes?** ChatGPT does not file returns itself, but in Work mode or in Codex (also in the ChatGPT app) it can take your federal tax return to Terminal Tax with nothing to install and no connector: say "File my taxes with terminal.tax." ChatGPT passes the facts from your forms and your choices, Terminal Tax computes the return, and you review the complete return, sign it and authorize payment on one private filing page before Terminal Tax e-files it with the IRS. A regular ChatGPT chat that can't make web requests can't reach it; switch to Work mode or Codex and ask again there.
 
-**Can Claude file my taxes?** Claude does not file returns itself, but Claude Code calls Terminal Tax directly over HTTPS with nothing to install and no connector: ask it to file your 2025 taxes with terminal.tax. Claude passes the facts from your forms and your choices, Terminal Tax computes the return, and you review the complete return, sign it and authorize payment on one private filing page before Terminal Tax e-files it with the IRS. Claude Code on the web works once its network access allows terminal.tax and mcp.terminal.tax; the developer guide, https://terminal.tax/llms.txt, shows that one setting. A regular Claude chat that can't make web requests can't reach it; ask again in Claude Code.
+**Can Claude file my taxes?** Claude does not file returns itself, but Claude Code calls Terminal Tax directly over HTTPS with nothing to install and no connector: ask it to file your taxes with terminal.tax. Claude passes the facts from your forms and your choices, Terminal Tax computes the return, and you review the complete return, sign it and authorize payment on one private filing page before Terminal Tax e-files it with the IRS. Claude Code on the web works once its network access allows terminal.tax and mcp.terminal.tax; the developer guide, https://terminal.tax/llms.txt, shows that one setting. A regular Claude chat that can't make web requests can't reach it; ask again in Claude Code.
 
 More answers: https://terminal.tax/chatbot-e-file
 
@@ -27,7 +27,7 @@ What the requests do: the first two describe the service and its three tools. Th
 
 The filingSessionUrl goes to the person on its own line as bare text, exactly as returned, usually with words like: "Your return is ready for the final steps. Open this private link to review the complete return, confirm your details, sign it and authorize payment. Nothing is sent to the IRS until you sign, the $19.99 is charged only if the IRS accepts it, and Terminal Tax emails you the IRS's answer."
 
-A chat that can only search or read pages cannot send these requests, and this site has no form to use instead; from such a chat, the person can open any coding or agent app that can run commands or send web requests, such as ChatGPT in agent or Work mode, Claude Code, Codex, Grok or Muse, and ask it: "File my 2025 taxes with Terminal Tax." In Claude Code on the web (claude.ai/code), an environment that cannot reach mcp.terminal.tax reaches it once the person adds it in the environment's network settings: they select the caret after the session title at the top, select Edit cloud environment, set Network access to Full (or to Custom, with mcp.terminal.tax and terminal.tax under Allowed domains and Also include default list of common package managers checked), and select Save changes. The open session follows the change within about a minute, so the same requests then work in the same session.
+A chat that can only search or read pages cannot send these requests, and this site has no form to use instead; from such a chat, the person can open any coding or agent app that can run commands or send web requests, such as ChatGPT in agent or Work mode, Claude Code, Codex, Grok or Muse, and ask it: "File my taxes with Terminal Tax." In Claude Code on the web (claude.ai/code), an environment that cannot reach mcp.terminal.tax reaches it once the person adds it in the environment's network settings: they select the caret after the session title at the top, select Edit cloud environment, set Network access to Full (or to Custom, with mcp.terminal.tax and terminal.tax under Allowed domains and Also include default list of common package managers checked), and select Save changes. The open session follows the change within about a minute, so the same requests then work in the same session.
 
 ## Connect
 
@@ -51,9 +51,9 @@ the IRS outcome, accepted or rejected, to the taxpayer at the contact they verif
 
 ## Scope
 
-- One original tax year 2025 US federal Form 1040 or 1040-SR per session (and a narrow Form 1040-SS or Form 1040-NR).
-- No state, territory or local return; no amended return (1040-X) or extension (4868).
-- Supported and refused situations: https://terminal.tax/llms.txt. Anything unsupported comes back as a named blocker.
+- One original US federal Form 1040 or 1040-SR per session (and a narrow Form 1040-SS or Form 1040-NR).
+- The tax years, returns and situations supported today, and those refused: https://terminal.tax/llms.txt. Anything
+  unsupported comes back as a named blocker.
 
 Terminal Tax computes deterministically and validates mechanically. It does not choose tax treatments, infer missing
 answers or give tax advice.
