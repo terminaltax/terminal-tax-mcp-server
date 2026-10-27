@@ -1,5 +1,15 @@
 # Terminal Tax
 
+**You already researched your taxes with your AI agent. Skip the hours of tax forms and let it file directly with the IRS.**
+
+More and more people already do their taxes with an AI agent: they go through their tax forms, ask questions, and get a clear answer about what they owe or what they're getting back. Then they hit a wall. To actually file, they have to start over in TurboTax or another tax website and work through its forms.
+
+Terminal Tax removes that wall. Ask an AI agent that can make web requests (Claude Code, Codex, Cursor or ChatGPT in Work mode) to file with Terminal Tax, and it sends us the facts and choices from your conversation. Terminal Tax is tax software: it calculates your return from them and runs e-file checks before anything is sent, and anything missing goes back to your agent to settle with you. You get one private page: you look over the complete return, type your SSN and signing details there (never in the chat), and sign it yourself. We file it with the IRS and email you its answer. You pay $19.99 only if the IRS accepts it.
+
+No account to create, nothing to install, no tax forms to retype. Your AI agent is where you did the thinking; Terminal Tax is how it reaches the IRS. Terminal Tax never chooses a tax treatment for you. Terminal Tax LLC is an Authorized IRS e-file Provider.
+
+<sub>TurboTax is a registered trademark of Intuit Inc. Terminal Tax is not affiliated with or endorsed by Intuit.</sub>
+
 Terminal Tax is a hosted remote MCP server, operated by Terminal Tax LLC, through which a person e-files their tax return
 from their own AI assistant: the
 assistant passes the facts from the person's forms and their choices, and Terminal Tax computes the return. The person reviews the complete return, confirms their details, signs and authorizes payment on one secure Terminal
