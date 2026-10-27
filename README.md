@@ -102,7 +102,7 @@ It contains no code and nothing to run: the server is hosted by Terminal Tax LLC
 
 ## Demo
 
-[Demo video (MP4)](https://terminaltax.github.io/terminal-tax-mcp-server/demo/): an edited test demonstration, pauses shortened. Earlier recordings:
+[Demo video (MP4)](https://terminaltax.github.io/terminal-tax-mcp-server/demo/) ([YouTube](https://www.youtube.com/watch?v=Eb_J8XBoezw)): an edited test demonstration, pauses shortened. Earlier recordings:
 
 [demo/terminal-tax-demo-1.2.0.mp4](demo/terminal-tax-demo-1.2.0.mp4): a 3 min 58 s recording on the Terminal Tax test environment (app.terminal.tax) with a fictional taxpayer; nothing is filed or charged. A customer asks their AI assistant to use Terminal Tax; the assistant, with nothing installed or connected, reaches Terminal Tax with ordinary web requests, asks its questions, reads the W-2 and 1099-INT the customer shares, and hands over the filing link; on the filing page the customer confirms their email with a one-time code, reviews the return, adds a card and signs. Transcript: [demo/terminal-tax-demo-1.2.0.md](demo/terminal-tax-demo-1.2.0.md).
 
