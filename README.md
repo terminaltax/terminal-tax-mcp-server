@@ -1,5 +1,9 @@
 # Terminal Tax
 
+<a href="https://terminaltax.github.io/terminal-tax-mcp-server/demo/"><img src="demo/terminal-tax-demo-2026-10-27.gif" alt="Terminal Tax demo: filing a tax return from an AI conversation" width="960"></a>
+
+<sub>Edited test demonstration, pauses shortened. <a href="https://terminaltax.github.io/terminal-tax-mcp-server/demo/">Watch the MP4</a>.</sub>
+
 **You already researched your taxes with your AI agent. Skip the hours of tax forms and let it file directly with the IRS.**
 
 More and more people already do their taxes with an AI agent: they go through their tax forms, ask questions, and get a clear answer about what they owe or what they're getting back. Then they hit a wall. To actually file, they have to start over in TurboTax or another tax website and work through its forms.
@@ -97,6 +101,8 @@ This repository holds only this description, the MCP Registry `server.json`, cli
 It contains no code and nothing to run: the server is hosted by Terminal Tax LLC.
 
 ## Demo
+
+[Demo video (MP4)](https://terminaltax.github.io/terminal-tax-mcp-server/demo/): an edited test demonstration, pauses shortened. Earlier recordings:
 
 [demo/terminal-tax-demo-1.2.0.mp4](demo/terminal-tax-demo-1.2.0.mp4): a 3 min 58 s recording on the Terminal Tax test environment (app.terminal.tax) with a fictional taxpayer; nothing is filed or charged. A customer asks their AI assistant to use Terminal Tax; the assistant, with nothing installed or connected, reaches Terminal Tax with ordinary web requests, asks its questions, reads the W-2 and 1099-INT the customer shares, and hands over the filing link; on the filing page the customer confirms their email with a one-time code, reviews the return, adds a card and signs. Transcript: [demo/terminal-tax-demo-1.2.0.md](demo/terminal-tax-demo-1.2.0.md).
 
