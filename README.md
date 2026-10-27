@@ -98,8 +98,6 @@ It contains no code and nothing to run: the server is hosted by Terminal Tax LLC
 
 ## Demo
 
-[demo/terminal-tax-demo-1.3.0.mp4](demo/terminal-tax-demo-1.3.0.mp4): a 2 min 3 s screen recording of a real session in Claude Code on the web, on the Terminal Tax test environment (app.terminal.tax) with a fictional taxpayer; nothing is filed or charged. Casey attaches a W-2 and a 1099-INT and asks her AI agent to help with her taxes; it works out the refund, and when she asks it to file with Terminal Tax it reaches Terminal Tax with ordinary web requests (nothing installed or connected) and hands over the filing link. On the filing page she confirms her email with a one-time code, reviews the complete return, adds a card, signs, and gets the IRS answer by email. Stretches where the agent is only working are sped up and marked. Transcript: [demo/terminal-tax-demo-1.3.0.md](demo/terminal-tax-demo-1.3.0.md).
-
-An earlier version, [demo/terminal-tax-demo-1.2.0.mp4](demo/terminal-tax-demo-1.2.0.mp4) (transcript: [demo/terminal-tax-demo-1.2.0.md](demo/terminal-tax-demo-1.2.0.md)), replays a headless session in a re-rendered chat.
+[demo/terminal-tax-demo-1.2.0.mp4](demo/terminal-tax-demo-1.2.0.mp4): a 3 min 58 s recording on the Terminal Tax test environment (app.terminal.tax) with a fictional taxpayer; nothing is filed or charged. A customer asks their AI assistant to use Terminal Tax; the assistant, with nothing installed or connected, reaches Terminal Tax with ordinary web requests, asks its questions, reads the W-2 and 1099-INT the customer shares, and hands over the filing link; on the filing page the customer confirms their email with a one-time code, reviews the return, adds a card and signs. Transcript: [demo/terminal-tax-demo-1.2.0.md](demo/terminal-tax-demo-1.2.0.md).
 
 The earlier recording, [demo/terminal-tax-demo.mp4](demo/terminal-tax-demo.mp4), shows the assistant's tool calls in a terminal.
