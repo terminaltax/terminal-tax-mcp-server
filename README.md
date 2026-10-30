@@ -65,9 +65,9 @@ the IRS outcome, accepted or rejected, to the taxpayer at the contact they verif
 
 ## Scope
 
-- One original Form 1040 or 1040-SR per session (and a narrow Form 1040-SS or Form 1040-NR).
-- The tax years, returns and situations supported today, and those refused: https://terminal.tax/llms.txt. Anything
-  unsupported comes back as a named blocker.
+- One return per filing session.
+- The prepared packet is checked when the assistant sends it; anything to settle comes back to the assistant by name,
+  and the filing page shows the exact return before the person signs.
 
 Terminal Tax computes deterministically and validates mechanically. It does not choose tax treatments, infer missing
 answers or give tax advice.
