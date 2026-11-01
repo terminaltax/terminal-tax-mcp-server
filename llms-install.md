@@ -1,11 +1,13 @@
 # Installing Terminal Tax
 
+Terminal Tax LLC is an Authorized IRS e-file Provider; records anyone can check, each with a direct link: https://terminal.tax/verify
+
 There is nothing to install. Terminal Tax is a hosted remote MCP server at `https://mcp.terminal.tax/v1/hosted-mcp`
 (Streamable HTTP), with no account, API key, OAuth or restart. Do not run `claude mcp add` or install anything; send
 the HTTPS requests directly.
 
 Each request is a JSON-RPC 2.0 POST to `https://mcp.terminal.tax/v1/hosted-mcp` with the headers
-`Content-Type: application/json` and `Accept: application/json, text/event-stream`, and no Authorization header:
+`'Content-Type: application/json'` and `'Accept: application/json, text/event-stream'` (one header; the comma stays inside its quotes), and no Authorization header:
 
 ```sh
 curl -sS https://mcp.terminal.tax/v1/hosted-mcp -H 'Content-Type: application/json' -H 'Accept: application/json, text/event-stream' -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"filing-agent","version":"1"}}}'
