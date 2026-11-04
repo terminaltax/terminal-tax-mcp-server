@@ -1,0 +1,3 @@
+# Pages layout and stylesheet for the demo page, not source code: keep them out of GitHub's language label.
+_layouts/default.html linguist-documentation
+assets/style.css linguist-documentation
