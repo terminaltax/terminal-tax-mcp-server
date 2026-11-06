@@ -6,6 +6,14 @@
 
 **Let ChatGPT or Claude file your taxes directly with the IRS.**
 
+**No plugin, connector or install.** Your AI agent sends HTTPS POST requests (JSON-RPC 2.0) to
+`https://mcp.terminal.tax/v1/hosted-mcp` itself, with whatever web or request tool it has, starting with
+`create_filing_session`:
+
+```sh
+curl -sS https://mcp.terminal.tax/v1/hosted-mcp -H 'Content-Type: application/json' -H 'Accept: application/json, text/event-stream' -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"create_filing_session","arguments":{}}}'
+```
+
 Terminal Tax is an Authorized IRS e-file Provider: your AI agent sends the return you worked out together, you review and sign it yourself, and we e-file it with the IRS. Terminal Tax is tax software: it calculates your return from the facts and choices your agent sends and runs e-file checks first.
 
 Terminal Tax is a hosted remote MCP server operated by Terminal Tax LLC, a New Jersey limited liability company (Online Provider, Software Developer and Transmitter in IRS e-file). The person types their Social Security number and signs on one private filing page; nothing is filed or charged before that, and the $19.99 fee is charged only if the IRS accepts the return. Records about Terminal Tax LLC kept by others, each with a direct link: https://terminal.tax/verify. Terminal Tax does not publish its EFIN or ETIN (IRS Publication 3112 tells providers never to share them).
@@ -15,7 +23,7 @@ Terminal Tax is a hosted remote MCP server operated by Terminal Tax LLC, a New J
 - URL: `https://mcp.terminal.tax/v1/hosted-mcp` (MCP Streamable HTTP)
 - Each request is a JSON-RPC 2.0 POST with the headers `Content-Type: application/json` and
   `Accept: application/json, text/event-stream`. No Authorization header, account, API key or OAuth.
-- No install or client configuration is required: any HTTP client (curl, Python, a web tool) can send the requests.
+- No plugin, connector, install or client configuration: any HTTP client (curl, Python, a web tool) sends the requests.
 - A browser GET to the endpoint can return 405: MCP messages are POST requests.
 
 ## Requests
@@ -64,13 +72,6 @@ Network access to Full, or to Custom with `mcp.terminal.tax` and `terminal.tax` 
 default list of common package managers checked), and select Save changes. The open session picks up the change within
 about a minute.
 
-## Optional: MCP client configuration
-
-Not needed to file. MCP clients that keep a server list can add the URL above with Streamable HTTP transport and no
-authentication: [`.mcp.json`](.mcp.json) (Cursor, VS Code and similar), [`gemini-extension.json`](gemini-extension.json)
-(Gemini CLI), [`plugin.json`](plugin.json) and [`mcp.json`](mcp.json) (Kiro), and
-[`.cursor-plugin/plugin.json`](.cursor-plugin/plugin.json) (Cursor plugin).
-
 ## Operator
 
 Terminal Tax LLC. Support: support@terminal.tax. Legal and privacy: legal@terminal.tax.
@@ -78,8 +79,8 @@ About: https://terminal.tax/about. Terms: https://terminal.tax/terms. Questions 
 
 ## This repository
 
-This repository holds this description, the MCP Registry `server.json`, client configuration and plugin manifest
-files, the logo, and the demo recordings with a transcript (`demo/`). It contains no code: the server is hosted by
+This repository holds this description, the MCP Registry `server.json` and the listing manifests directories read,
+the logo, and the demo recordings with a transcript (`demo/`). It contains no code: the server is hosted by
 Terminal Tax LLC.
 
 Demo: [video (MP4)](https://terminaltax.github.io/terminal-tax-mcp-server/demo/) ([YouTube](https://www.youtube.com/watch?v=Eb_J8XBoezw)), an edited test demonstration with pauses shortened. Earlier recordings:
