@@ -68,9 +68,8 @@ details, sign it and authorize payment. No tool reports the IRS result; Terminal
 
 Claude Code on the web (claude.ai/code) runs in a cloud environment with a network allowlist. If a request to
 `mcp.terminal.tax` is refused there: select the caret after the session title, select Edit cloud environment, set
-Network access to Full, or to Custom with `mcp.terminal.tax` and `terminal.tax` under Allowed domains (keep Also include
-default list of common package managers checked), and select Save changes. The open session picks up the change within
-about a minute.
+Network access to Full, or Limited with `mcp.terminal.tax` and `terminal.tax` in Allowed domains, and select Save
+changes. The open session picks up the change within about a minute.
 
 ## Operator
 
